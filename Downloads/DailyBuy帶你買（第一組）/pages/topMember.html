@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/topMember.css">
+  <style>
+    @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+  </style>
+
+</head>
+
+<body>
+  <!--上方的header-->
+  <header class="nav">
+    <a href="/index" class="header_logo">
+      <img src="/media/logo/logo.png" alt="logo" />
+    </a>
+    <div class="header_text">
+      <div class="items"><a href="/news">最新消息</a></div>
+      <div class="items"><a href="/top">精選團購</a></div>
+      <div class="items"><a href="/allProducts">全部團購</a></div>
+      <div class="items"><a href="/wish">許願清單</a></div>
+    </div>
+    <a href="/member" class="member_icon">
+      <img
+        id="member_icon"
+        src="/media/logo/member_icon.png"
+        style="width: 50px; height: 50px; border-radius: 50%"
+        alt=""
+      />
+    </a>
+    <script src="js/headerIcon.js"></script>
+  </header>
+
+      <!--右方的header-->
+      <aside>
+        <div class="seach_icon">
+          <a href="#" class="icon bi bi-search"></a>
+          <a href="#" class="icon bi bi-facebook"></a>
+          <a href="#" class="icon bi bi-instagram"></a>
+          <a
+            href="/allProducts"
+            onclick="sessionStorage.setItem('collectList',true)"
+            class="icon bi bi-heart-fill"
+          ></a>
+        </div>
+        <div class="search_modal">
+          <input type="text" class="bi bi-search search_modal_input" />
+          <button class="icon bi bi-search search_icon"></button>
+        </div>
+        <div class="search_modal_background"></div>
+        <script src="/js/header.js"></script>
+        <div class="about_us">
+          <div class="block"><a href="/sellerform">我要開團</a></div>
+          <div class="block"><a href="/about_us"> 關於我們</a></div>
+          <div class="block"><a href="/instruction"> 使用教學</a></div>
+        </div>
+      </aside>
+  <!--精選團主列-->
+  <div id="topMember_cards">
+    <div class="card_box">
+
+      <!-- <div class="container">
+          <div class="card col-12 justify-content-center" style="width: 100%; height: 300px; border-radius: 50px;">
+            <div class="row g-0">
+              <div class="col-md-3 mt-3 d-flex flex-column justify-content-center align-items-center">
+                <p class="fs-3">精選團主第一名</p>
+                <img src="/img/35p.png" class="pol_img" alt="頭像">
+                <p class="mt-2 fs-4">王小明</p>
+              </div>
+              <div class="col-md-8 mt-4">
+                <div class="card-body">
+                  <h5 class="card-title">主要所在地:台中</h5>
+                  <img src="/img/w1200.jpg" class="pd_img" alt="頭像">
+                  <img src="/img/w1200.jpg" class="pd_img" alt="頭像">
+                  <img src="/img/w1200.jpg" class="pd_img" alt="頭像">
+                  <img src="/img/w1200.jpg" class="pd_img" alt="頭像">
+                  <p class="card-text align-items-center"><small class="text-muted ">團購履歷</small></p>
+                </div>
+              </div>
+              <div class="col-md-1">
+                <button type="button" class="card_btn btn-primary" data-bs-toggle="modal"
+                  data-bs-target="#cardModal">連絡他</button>
+              </div>
+            </div>
+          </div>
+  
+          <div class="modal fade" id="cardModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="cardModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="box_Img col-md-4"><img src="/img/35p.png" class="pol_modal_img" alt="頭像"></div>
+                      <div class="box_text col-md-8">
+                        <h5>姓名 : 王小明</h5>
+                        <h5>信箱 : 123456@ghighi.com</h5>
+                        <h5>生日 : 0000/00/00</h5>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                          <button class="nav-link active" id="nav-message-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-message" type="button" role="tab" aria-controls="nav-message"
+                            aria-selected="false">站內私訊</button>
+                        </li>
+                      </ul>
+                      </nav>
+                      <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-message" role="tabpanel"
+                          aria-labelledby="nav-message-tab">
+                          <form>
+                            <div class="mb-3 mt-3">
+                              <p>在此輸入要詢問的內容，系統將為你送出信件</p>
+                            </div>
+                            <div class="mb-3">
+                              <textarea class="form-control" id="message-text" rows="3"></textarea>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-primary">送出</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div> -->
+
+
+      <script src="/js/topMember.js"></script>
+    </div>
+  </div>
+
+
+   <!-- footer -->
+   <footer class="footer_pd">
+    <ul>
+      <li class="footer_main"><a href="/news">最新消息</a></li>
+    </ul>
+    <ul>
+      <li class="footer_main"><a href="/allProducts">全部團購</a></li>
+      <li class="footer_sub">
+        <a href="/allProducts" onclick="sessionStorage.setItem('place','n')"
+          >北部團購</a
+        >
+      </li>
+      <li class="footer_sub">
+        <a href="/allProducts" onclick="sessionStorage.setItem('place','m')"
+          >中部團購</a
+        >
+      </li>
+      <li class="footer_sub">
+        <a href="/allProducts" onclick="sessionStorage.setItem('place','s')"
+          >南部團購</a
+        >
+      </li>
+      <li class="footer_sub">
+        <a href="/allProducts" onclick="sessionStorage.setItem('place','e')"
+          >東部團購</a
+        >
+      </li>
+      <li class="footer_sub">
+        <a href="/allProducts" onclick="sessionStorage.setItem('place','o')"
+          >外島團購</a
+        >
+      </li>
+    </ul>
+    <ul>
+      <li class="footer_main"><a href="/top">精選團購</a></li>
+      <li class="footer_sub">
+        <a href="/allProducts" onclick="sessionStorage.setItem('place','n')"
+          >北部團購</a
+        >
+      </li>
+      <li class="footer_sub">
+        <a href="/allProducts" onclick="sessionStorage.setItem('place','m')"
+          >中部團購</a
+        >
+      </li>
+      <li class="footer_sub">
+        <a href="/allProducts" onclick="sessionStorage.setItem('place','s')"
+          >南部團購</a
+        >
+      </li>
+      <li class="footer_sub">
+        <a href="/allProducts" onclick="sessionStorage.setItem('place','e')"
+          >東部團購</a
+        >
+      </li>
+      <li class="footer_sub">
+        <a href="/allProducts" onclick="sessionStorage.setItem('place','o')"
+          >外島團購</a
+        >
+      </li>
+    </ul>
+    <ul>
+      <li class="footer_main"><a href="/member">會員中心</a></li>
+      <li class="footer_sub"><a href="/register">註冊</a></li>
+      <li class="footer_sub"><a href="/login">登入</a></li>
+      <li class="footer_sub">
+        <a href="#" id="logout" onclick="logout()">登出</a>
+      </li>
+    </ul>
+    <ul>
+      <li class="footer_main"><a href="/about_us">關於我們</a></li>
+    </ul>
+    <ul>
+      <li class="footer_main"><a href="/about_us">聯絡我們</a></li>
+    </ul>
+    <ul>
+      <li class="footer_main"><a href="/instruction">使用教學</a></li>
+    </ul>
+  </footer>
+  <script src="/js/logout.js"></script>
+
+</body>
+
+</html>

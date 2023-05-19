@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+
+    <style>
+      @font-face {
+       
+        font-family: "GenSenRounded TW";
+        src: url("/font/GenSenRounded-M.ttc") format("truetype");
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: GenSenRounded TW, cwTeXYen;
+        background-color: rgb(236, 236, 236);
+      }
+      button {
+        cursor: pointer;
+      }
+      h2 {
+        font-size: 42px;
+        color: rgb(22, 22, 22);
+      }
+      .news_container {
+        /* border: 1px solid #000; */
+        width: 80%;
+        height: 200vh;
+        margin: auto;
+        position: relative;
+        height: 240vh;
+        margin-top: 6%;
+      }
+      .news_container .news_card {
+        position: relative;
+      }
+      .news_container .news_card .card_cover {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .news_container .news_card .card_img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
+      .news_container .news_card .card_context {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        color: aliceblue;
+        font-size: 36px;
+      }
+      .news_card .card_content {
+        height: 300px;
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+     <!--上方的header-->
+   <header class="nav">
+    <a href="/index" class="header_logo">
+      <img src="/media/logo/logo.png" alt="logo" />
+    </a>
+    <div class="header_text">
+      <div class="items"><a href="/news">最新消息</a></div>
+      <div class="items"><a href="/top">精選團購</a></div>
+      <div class="items"><a href="/allProducts">全部團購</a></div>
+      <div class="items"><a href="/wish">許願清單</a></div>
+    </div>
+    <a href="/member" class="member_icon">
+      <img
+        id="member_icon"
+        src="/media/logo/member_icon.png"
+        style="width: 50px; height: 50px; border-radius: 50%"
+        alt=""
+      />
+    </a>
+    <script src="js/headerIcon.js"></script>
+  </header>
+
+      <!--右方的header-->
+      <aside>
+        <div class="seach_icon">
+          <a href="#" class="icon bi bi-search"></a>
+          <a href="#" class="icon bi bi-facebook"></a>
+          <a href="#" class="icon bi bi-instagram"></a>
+          <a
+            href="/allProducts"
+            onclick="sessionStorage.setItem('collectList',true)"
+            class="icon bi bi-heart-fill"
+          ></a>
+        </div>
+        <div class="search_modal">
+          <input type="text" class="bi bi-search search_modal_input" />
+          <button class="icon bi bi-search search_icon"></button>
+        </div>
+        <div class="search_modal_background"></div>
+        <script src="/js/header.js"></script>
+        <div class="about_us">
+          <div class="block"><a href="/sellerform">我要開團</a></div>
+          <div class="block"><a href="/about_us"> 關於我們</a></div>
+          <div class="block"><a href="/instruction"> 使用教學</a></div>
+        </div>
+      </aside>
+
+
+    <div class="news_container">
+      <h1>最新消息</h1>
+      <div class="news_card">
+        <div class="card_cover">
+          <img src="./media/pic/shopping_bag.jpg" alt="" class="card_img" />
+          <p class="card_context">中部地區限定！最新團購折扣活動開跑啦！</p>
+        </div>
+        <p class="card_content">
+          【中部地區限定！最新團購折扣活動開跑啦！】<br /><br />
+          專屬於中部地區的團購折扣活動現在開跑啦！限時優惠讓你超值享受美食、旅遊、休閒娛樂等多種優惠活動。只要在活動期間內加入我們的團購活動，就能享受到超低折扣價，不用再煩惱高昂的消費費用困擾你了！
+          <br /><br />
+          【本次活動重點】<br />
+          中部地區限定，多種團購活動任你選擇！ <br />
+          超值折扣價格，讓你省下更多預算！ <br />
+          活動期間限時優惠，機會難得，千萬別錯過！ <br />
+          網路購物輕鬆便捷，還能享受到超值的折扣優惠！ <br /><br />
+          別再等了！趕緊加入我們的團購活動，和親朋好友一起享受超值的優惠吧！活動期間限時，機會難得，千萬別錯過！
+        </p>
+      </div>
+      <div class="news_card">
+        <div class="card_cover">
+          <img
+            src="./media/pic/many_shopping_bag.jpg"
+            alt=""
+            class="card_img"
+          />
+          <p class="card_context">中部地區限定！最新團購折扣活動開跑啦！</p>
+        </div>
+        <p class="card_content">
+          【中部地區限定！最新團購折扣活動開跑啦！】<br /><br />
+          專屬於中部地區的團購折扣活動現在開跑啦！限時優惠讓你超值享受美食、旅遊、休閒娛樂等多種優惠活動。只要在活動期間內加入我們的團購活動，就能享受到超低折扣價，不用再煩惱高昂的消費費用困擾你了！
+          <br /><br />
+          【本次活動重點】<br />
+          中部地區限定，多種團購活動任你選擇！ <br />
+          超值折扣價格，讓你省下更多預算！ <br />
+          活動期間限時優惠，機會難得，千萬別錯過！ <br />
+          網路購物輕鬆便捷，還能享受到超值的折扣優惠！ <br /><br />
+          別再等了！趕緊加入我們的團購活動，和親朋好友一起享受超值的優惠吧！活動期間限時，機會難得，千萬別錯過！
+        </p>
+      </div>
+    </div>
+    
+ <!-- footer -->
+ <footer class="footer_pd">
+  <ul>
+    <li class="footer_main"><a href="/news">最新消息</a></li>
+  </ul>
+  <ul>
+    <li class="footer_main"><a href="/allProducts">全部團購</a></li>
+    <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','n')">北部團購</a></li>
+    <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','m')">中部團購</a></li>
+    <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','s')">南部團購</a></li>
+    <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','e')">東部團購</a></li>
+    <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','o')">外島團購</a></li>
+  </ul>
+  <ul>
+    <li class="footer_main"><a href="/top">精選團購</a></li>
+    <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','n')">北部團購</a></li>
+    <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','m')">中部團購</a></li>
+    <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','s')">南部團購</a></li>
+    <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','e')">東部團購</a></li>
+    <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','o')">外島團購</a></li>
+  </ul>
+  <ul>
+    <li class="footer_main"><a href="/member">會員中心</a></li>
+    <li class="footer_sub"><a href="/register">註冊</a></li>
+    <li class="footer_sub"><a href="/login">登入</a></li>
+    <li class="footer_sub"><a href="#" id="logout" onclick="logout()">登出</a></li>
+  </ul>
+  <ul>
+    <li class="footer_main"><a href="/about_us">關於我們</a></li>
+  </ul>
+  <ul>
+    <li class="footer_main"><a href="/about_us">聯絡我們</a></li>
+  </ul>
+  <ul>
+    <li class="footer_main"><a href="/instruction">使用教學</a></li>
+  </ul>
+</footer>
+<script src="/js/logout.js"></script>
+ 
+ 
+  </body>
+</html>

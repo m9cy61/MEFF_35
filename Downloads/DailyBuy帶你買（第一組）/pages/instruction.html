@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script
+      src="https://kit.fontawesome.com/59df8fb993.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/header.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+
+    <style>
+      @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+      @font-face {
+        font-family: "Lobster";
+        src: url("Lobster/Lobster-Regular.ttf");
+        font-family: "MochiyPopOne-Regular";
+        src: url("Mochiy_Pop_One/MochiyPopOne-Regular.ttf");
+        font-family: "GenSenRounded TW";
+        src: url("../font/GenSenRounded-M.ttc") format("truetype");
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        box-sizing: border-box;
+        list-style: none;
+      }
+
+      body {
+        /* display: flex; */
+        font-family: GenSenRounded TW, cwTeXYen;
+
+        background-color: rgb(195, 195, 195);
+      }
+
+      #instruction {
+        right: 50px;
+        width: 100vw;
+        height: 180vh;
+        /* background-color: rgb(169, 112, 26); */
+        /* margin-top: 20%; */
+        top: 9.5vh;
+        position: relative;
+        background-color: rgb(226, 226, 226);
+      }
+
+      .open_instruction,
+      .buy_instruction {
+        width: 100%;
+        height: 48%;
+      }
+
+      .item_wrap {
+        width: 100%;
+        height: 100%;
+        /* background-color: green; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2% 7.5% 3.5% 7.5%;
+      }
+
+      .item_wrap h2 {
+        font-size: 50px;
+        align-self: flex-start;
+        margin-bottom: 3.5%;
+      }
+
+      .item_wrap .items {
+        width: 100%;
+        height: 100%;
+        /* background-color: blue; */
+        /* border: 1px solid #fff; */
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+
+      .item_wrap .items .item {
+        width: 280px;
+        height: 100%;
+        background-color: #f3d7a8;
+        /* border: 1px solid rgb(0, 0, 0); */
+        position: relative;
+        border-radius: 25px;
+
+        padding: 2%;
+
+        transition: 0.8s;
+        /* overflow: hidden; */
+      }
+
+      .items .item h3 {
+        font-size: 25px;
+        /* color: #fff; */
+        background-color: rgb(27, 27, 27);
+        width: 100px;
+        padding-left: 12px;
+        padding: auto;
+        border-radius: 10px;
+        color: burlywood;
+        position: absolute;
+        left: -16%;
+        top: -3%;
+      }
+
+      .items .item h2 {
+        font-size: 36px;
+        position: relative;
+      }
+
+      .items .item h2::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: rgb(140, 140, 140);
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+      }
+
+      .items .item p {
+        /* background-color: aliceblue; */
+        width: 100%;
+        height: 50%;
+        padding-top: 15px;
+        color: #1d1d1d;
+
+        font-size: 22px;
+
+        /* border: 1px solid #000000; */
+        margin-bottom: 15px;
+        /* overflow-y: hidden; */
+      }
+
+      .items .item p a {
+        text-decoration: underline;
+        color: chocolate;
+      }
+
+      .items .item img {
+        /* background-color: aquamarine; */
+        width: 100%;
+        height: 25%;
+        bottom: 0;
+        filter: grayscale(0.2) brightness(0.8);
+        object-fit: cover;
+      }
+
+      .item:hover {
+        transform: scale(1.1);
+        background-color: #ffc16b;
+        box-shadow: 7px 10px 15px -3px rgba(0, 0, 0, 0.48);
+      }
+
+      .qawrap {
+        width: 100%;
+        height: 40%;
+        margin-bottom: 2%;
+        /* background-color: aqua; */
+      }
+
+      #QandA {
+        /* position: relative; */
+        width: 70%;
+        height: 400px;
+        background-color: #ffc16b;
+        margin: auto;
+        margin-top: 10%;
+
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+
+        overflow: hidden;
+      }
+
+      .question_wrap {
+        width: 100%;
+        height: 100%;
+        background-color: #f6bd88;
+        position: relative;
+      }
+
+      .question {
+        width: 100%;
+        height: 100px;
+        padding-top: 25px;
+        padding-left: 15px;
+        border-bottom: #1d1d1d 1px solid;
+        /* background-color: blueviolet; */
+        cursor: pointer;
+        font-size: 36px;
+        color: #000000;
+        /* z-index: 1; */
+      }
+
+      .anwser {
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        background-color: #fff;
+        font-size: 25px;
+        padding: 15px;
+        /* background-color: red; */
+
+        transition: 0.8s;
+      }
+
+      .question_wrap:hover .anwser {
+        transform: translateY(-100%);
+      }
+
+      .question_wrap:last-child .question {
+        border: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--上方的header-->
+    <header class="nav">
+      <a href="/index" class="header_logo">
+        <img src="/media/logo/logo.png" alt="logo" />
+      </a>
+      <div class="header_text">
+        <div class="items"><a href="/news">最新消息</a></div>
+        <div class="items"><a href="/top">精選團購</a></div>
+        <div class="items"><a href="/allProducts">全部團購</a></div>
+        <div class="items"><a href="/wish">許願清單</a></div>
+      </div>
+      <a href="/member" class="member_icon">
+        <img
+          id="member_icon"
+          src="/media/logo/member_icon.png"
+          style="width: 50px; height: 50px; border-radius: 50%"
+          alt=""
+        />
+      </a>
+      <script src="js/headerIcon.js"></script>
+    </header>
+  
+        <!--右方的header-->
+        <aside>
+          <div class="seach_icon">
+            <a href="#" class="icon bi bi-search"></a>
+            <a href="#" class="icon bi bi-facebook"></a>
+            <a href="#" class="icon bi bi-instagram"></a>
+            <a
+              href="/allProducts"
+              onclick="sessionStorage.setItem('collectList',true)"
+              class="icon bi bi-heart-fill"
+            ></a>
+          </div>
+          <div class="search_modal">
+            <input type="text" class="bi bi-search search_modal_input" />
+            <button class="icon bi bi-search search_icon"></button>
+          </div>
+          <div class="search_modal_background"></div>
+          <script src="/js/header.js"></script>
+          <div class="about_us">
+            <div class="block"><a href="/sellerform">我要開團</a></div>
+            <div class="block"><a href="/about_us"> 關於我們</a></div>
+            <div class="block"><a href="/instruction"> 使用教學</a></div>
+          </div>
+        </aside>
+  
+
+
+    <div id="instruction">
+      <div class="buy_instruction">
+        <div class="item_wrap">
+          <h2>跟團教學</h2>
+
+          <div class="items">
+            <div class="item">
+              <h3>Step.1</h3>
+
+              <h2>選擇商品</h2>
+
+              <p>
+                首先，先選中您心儀的<a href="#" target="_blank">商品</a
+                >，若現有的團中沒有您想要的商品，可以到<a href="#">許願功能</a
+                >中新增，您會在第一時間收到開團通知信
+              </p>
+
+              <img src="/media/pic/timothy-muza-6VjPmyMj5KM-unsplash.jpg" alt="" />
+            </div>
+            <div class="item">
+              <h3>Step.2</h3>
+
+              <h2>填寫表單</h2>
+
+              <p>
+                選好商品之後，將您的資料填寫在<a href="#" target="_blank"
+                  >表單</a
+                >內，並按下送出;請務必在填寫時再度確認交貨方式及時間是否能夠配合
+              </p>
+
+              <img src="/media/pic/unseen-studio-s9CC2SKySJM-unsplash.jpg" alt="" />
+            </div>
+            <div class="item">
+              <h3>Step.3</h3>
+
+              <h2>付款</h2>
+
+              <p>
+                在付款頁面中填妥您的資訊，並點選確定結帳，系統就會收到您的訂單資料了
+              </p>
+
+              <img src="/media/pic/pay.jpg" alt="" />
+            </div>
+            <div class="item">
+              <h3>Step.4</h3>
+
+              <h2>等待出貨</h2>
+
+              <p>
+                等到團主結單之後，會通知各位商品以購買完成，請留意您註冊時的電子信箱，您也可以隨時在<a
+                  href="#"
+                  target="_blank"
+                  >我跟的團</a
+                >頁面中查詢訂單狀況
+              </p>
+
+              <img
+                src="/media/pic/kira-auf-der-heide-IPx7J1n_xUc-unsplash.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <hr> -->
+      <div class="open_instruction">
+        <div class="item_wrap">
+          <h2>開團教學</h2>
+          <div class="items">
+            <div class="item">
+              <h3>Step.1</h3>
+
+              <h2>建立開團表單</h2>
+
+              <p>
+                首先，先到<a href="#" target="_blank">開團表單</a
+                >中填妥商品資料，請務必評估您可以攜帶的量及商品的有效期限是否正確，更多詳細資訊請參考<a
+                  href="#"
+                  target="_blank"
+                  >免責聲明</a
+                >
+              </p>
+
+              <img
+                src="/media/pic/myriam-jessier-eveI7MOcSmw-unsplash.jpg"
+                alt=""
+              />
+            </div>
+            <div class="item">
+              <h3>Step.2</h3>
+
+              <h2>購買商品</h2>
+
+              <p>
+                請在結單日之後，預計出貨日之前前往店家購買指定數量的商品，若數量不足請在出貨前通知買家
+              </p>
+
+              <img src="/media/pic/freestocks-VFrcRtEQKL8-unsplash.jpg" alt="" />
+            </div>
+            <div class="item">
+              <h3>Step.3</h3>
+
+              <h2>出貨商品</h2>
+
+              <p>
+                請根據您開團時填好的方式出貨給買家，請注意本平台並不負責運送及運費相關事宜，在您寄送時請注意包裝完整及是否冷凍寄送等問題
+              </p>
+
+              <img src="/media/pic/rosebox-BFdSCxmqvYc-unsplash.jpg" alt="" />
+            </div>
+            <div class="item">
+              <h3>Step.4</h3>
+
+              <h2>確認出貨</h2>
+
+              <p>
+                出貨完成後，請到<a href="#" target="_blank">跟團資訊</a
+                >頁面中修改出貨狀態，待系統確認買家收到貨之後，會立即撥款給您
+              </p>
+
+              <img src="/media/pic/s.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="qawrap">
+      <ul id="QandA">
+        <title>常見問題</title>
+        <div class="question_wrap">
+          <li class="question">
+            Q : 我跟團了，但是結單之後沒有收到商品，付的款項怎麼辦?
+          </li>
+          <li class="anwser">
+            A :
+            若因缺貨貨團主跑單導致您沒有收到商品，您所付的款項將會退還至您的帳戶。
+          </li>
+        </div>
+        <div class="question_wrap">
+          <li class="question">Q : 我收到的商品過期了，能退貨嗎</li>
+          <li class="anwser">
+            A : 針對商品瑕疵的部分屬於您跟團主之間的糾紛，本平台不介入，請參考<a
+              href="#"
+              target="_blank"
+              >免責聲明</a
+            >
+          </li>
+        </div>
+        <div class="question_wrap">
+          <li class="question">
+            Q : 我要開團，但是店家表示缺貨，我還能完成這單嗎
+          </li>
+          <li class="anwser">
+            A :
+            在購買商品時請盡量滿足單上的數量，若因卻貨或其他店家因素導致購買數量不足，請在出貨日前告知跟團者
+          </li>
+        </div>
+        <div class="question_wrap">
+          <li class="question">Q : 待新增</li>
+          <li class="anwser">A : 待新增</li>
+        </div>
+      </ul>
+    </div>
+  <!-- footer -->
+  <footer class="footer_pd">
+    <ul>
+      <li class="footer_main"><a href="/news">最新消息</a></li>
+    </ul>
+    <ul>
+      <li class="footer_main"><a href="/allProducts">全部團購</a></li>
+      <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','n')">北部團購</a></li>
+      <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','m')">中部團購</a></li>
+      <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','s')">南部團購</a></li>
+      <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','e')">東部團購</a></li>
+      <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','o')">外島團購</a></li>
+    </ul>
+    <ul>
+      <li class="footer_main"><a href="/top">精選團購</a></li>
+      <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','n')">北部團購</a></li>
+      <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','m')">中部團購</a></li>
+      <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','s')">南部團購</a></li>
+      <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','e')">東部團購</a></li>
+      <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','o')">外島團購</a></li>
+    </ul>
+    <ul>
+      <li class="footer_main"><a href="/member">會員中心</a></li>
+      <li class="footer_sub"><a href="/register">註冊</a></li>
+      <li class="footer_sub"><a href="/login">登入</a></li>
+      <li class="footer_sub"><a href="#" id="logout" onclick="logout()">登出</a></li>
+    </ul>
+    <ul>
+      <li class="footer_main"><a href="/about_us">關於我們</a></li>
+    </ul>
+    <ul>
+      <li class="footer_main"><a href="/about_us">聯絡我們</a></li>
+    </ul>
+    <ul>
+      <li class="footer_main"><a href="/instruction">使用教學</a></li>
+    </ul>
+  </footer>
+  <script src="/js/logout.js"></script>
+   
+   
+  </body>
+</html>
