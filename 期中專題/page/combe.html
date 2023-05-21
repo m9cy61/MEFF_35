@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <link rel="stylesheet" href="./css/model.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/woofdaynice.css">
+    <link rel="icon" href="./img/shiba-'logo_工作區域 1 複本 2.png">
+    <script defer src="./JS/woofdaynice.js"></script>
+
+    <title>王日九寵物選物</title>
+
+</head>
+
+<body>
+    <nav class="fixed-top ">
+        <nav class="n1">
+            <div class="openMenu" style="background-color:transparent;">
+                <i class="bi bi-list" style="background-color:transparent;"></i>
+            </div>
+            <div class="header">
+                <a href="./index.html"><img id="logo" src="./img/shiba-'logo_line.png"></a>
+            </div>
+
+            <ul class="mainMenu title1" target="_blank">
+                <li><a href="./home copy.html#about_us" id="about">關於我們</a></li>
+                <li><a href="./food.html" id="food">狗狗飼料</a></li>
+                <li><a href="./snack.html" id="snack">狗狗點心</a></li>
+                <li><a href="./toy.html" id="toy">狗狗玩具</a></li>
+                <li><a href="./combe.html" id="combe">優惠組合</a></li>
+                <div class="closeMenu" style="background-color:transparent;">
+                    <i class="bi bi-x-lg" style="background-color:transparent;"></i>
+                </div>
+            </ul>
+        </nav>
+        <nav class="shop">
+            <div class="mb" style=" background:rgb(217, 195, 166);">
+                <a href="./member.html" id="member1">
+                    <i class="bi bi-person-vcard-fill" style="background-color:rgb(217, 195, 166);"></i>
+                </a>
+            </div>
+            <div class="sp" style=" background:rgb(217, 195, 166);">
+                <a href="#" id="shopping1">
+                    <i class="bi bi-cart4"></i>
+                    <span id="allshop"></span>
+                </a>
+            </div>
+        </nav>
+    </nav>
+    <br>
+    <br>
+
+    <div class="content2">
+        <div class="contenter">
+            <div class="row">
+                <div class="col-md-12 justify-content-center">
+                    <p class="title1"><strong>全部產品｜優惠組合
+                        </strong></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col"></div>
+                <div class="col-lg-2">
+                    <ul class="list1 d-none d-none d-lg-block ">
+                        <li><a href="./special.html"><i class="bi bi-brightness-alt-high"></i>&nbsp;精選產品</a></li>
+                        <li><a href="./food.html"><i class="bi bi-brightness-alt-high"></i>&nbsp;狗狗飼料</a></li>
+                        <li><a href="./snack.html"><i class="bi bi-brightness-alt-high"></i>&nbsp;狗狗點心</a></li>
+                        <li><a href="./toy.html"><i class="bi bi-brightness-alt-high"></i>&nbsp;狗狗玩具</a></li>
+                        <li><a href="./combe.html"><i class="bi bi-brightness-high-fill"></i>&nbsp;優惠組合</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3" style="margin-bottom: 50px;">
+                    <div class="row">
+                        <div class="row-col-2 no1">
+                            <img class="img-fluid" src="./img/網站用/快餐系列.png">
+                            <div class="addshop1 d-none d-md-block">
+                                <a href="#">
+                                    <div class="joinshopcar" id="A">加入購物車</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row-col-2">
+                            <b style="font-size:1rem;">快餐系列</b>
+                            <p style="font-size:0.8rem; margin-top: 5px 0 5px 0;">
+                                全品項商品<br>NT$900</p>
+                            <div class="d-grid gap-10 ">
+                                <button class="btn btn-12 btn-sm d-block d-sm-block d-md-none" id="a"><i
+                                        class="bi bi-cart3"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- model視窗 -->
+                <div id="noA" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="Aclose" id="close" style="background-color: transparent;">
+                                &times;
+                            </span>
+                        </div>
+                        <div class="modal-body">
+                            <img class="w-50" src="./img/網站用/快餐系列.png" style="float:left;margin:30px;">
+                            <div class="row" style="margin:20px;">
+                                <div class="row-col-2"><b style="font-size:1.5rem; ">快餐系列</b></div>
+                                <div class="row-col-2">
+                                    <p style="font-size:1.2rem; margin: 20px 0px 20px 0px;">快餐系列全品項</p>
+                                </div>
+                                <div class="row-col-2">
+                                    <div id="noAcount" style="font-size:1.2rem;text-align:center;">
+                                        <div>數量：
+                                            <button class="btn btn-sm" type="button" onclick="Aadd()"
+                                                id="plus">+</button>
+                                            <button class="btn btn-sm" type="button" id="Acount">1</button>
+                                            <button class="btn btn-sm" onclick="Aminus()" type="button"
+                                                id="reduce">-</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-col-2"><button class="btn pizza">全品項</button></div>
+                                <div class="row-col-2">
+                                    <div id="checkbtn" style="float:right;">
+                                        <button class="btn" id="check">確認</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    var Amodal = document.getElementById("noA");
+                    var Abtn = document.getElementById("A");
+                    var Aspan = document.getElementsByClassName("Aclose")[0];
+                    Abtn.onclick = function () {
+                        Amodal.style.display = "block";
+                    }
+                    Aspan.onclick = function () {
+                        Amodal.style.display = "none";
+                    }
+                    window.onclick = function (r) {
+                        if (r.target == Amodal) {
+                            document.getElementById("noA") = "none";
+                        }
+                    }
+                    function Aadd() {
+                        var conunt = document.getElementById("Acount").innerHTML;
+                        document.getElementById("Acount").innerHTML = parseInt(conunt) + 1;
+                    }
+                    function Aminus() {
+                        var conunt = document.getElementById("Acount").innerHTML;
+                        if (parseInt(conunt) > 1) {
+                            document.getElementById("Acount").innerHTML = parseInt(conunt) - 1;
+                        }
+                    }
+                    var num = 0;
+                    document.getElementById("check").onclick = function () {
+                        num++;
+                        console.log(num);
+                        document.getElementById("noA").style.display = "none";
+                        document.getElementById("allshop").innerText = num;
+                    }
+
+                </script>
+                <div id="noa" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="aclose" id="close" style="background-color: transparent;">
+                                &times;
+                            </span>
+                        </div>
+                        <div class="modal-body">
+                            <div><b style="font-size:1rem; ">快餐系列</b></div>
+                            <div><img class="w-75" src="./img/網站用/快餐系列.png" style=" margin-left:10%;"></div>
+                            <div>
+                                <p style="font-size:0.5rem;">快餐系列全品項</p>
+                            </div>
+                            <div id="acount" style="font-size:0.5rem; margin: 0px ;">數量：
+                                <button class="btn btn-xs" type="button" onclick="aadd()" id="plus">+</button>
+                                <button class="btn btn-xs" type="button" id="noacount">1</button>
+                                <button class="btn btn-xs" onclick="aminus()" type="button" id="reduce">-</button>
+                            </div>
+                            <button style="margin-top: 20px;font-size:0.7rem;" class="btn pizza">全品項</button>
+                            <div id="checkbtn">
+                                <button style="margin-bottom: 20px; font-size:0.7rem;" class="btn"
+                                    id="checka">確認</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    var amodal = document.getElementById("noa");
+                    var abtn = document.getElementById("a");
+                    var aspan = document.getElementsByClassName("aclose")[0];
+                    abtn.onclick = function () {
+                        amodal.style.display = "block";
+                    }
+                    aspan.onclick = function () {
+                        amodal.style.display = "none";
+                    }
+                    window.onclick = function (r) {
+                        if (r.target == amodal) {
+                            document.getElementById("noa") = "none";
+                        }
+                    }
+                    function aadd() {
+                        var conunt = document.getElementById("noacount").innerHTML;
+                        document.getElementById("noacount").innerHTML = parseInt(conunt) + 1;
+                    }
+                    function aminus() {
+                        var conunt = document.getElementById("noacount").innerHTML;
+                        if (parseInt(conunt) > 1) {
+                            document.getElementById("noacount").innerHTML = parseInt(conunt) - 1;
+                        }
+                    }
+                    function acheck() {
+                        amodal.style.display = "none";
+                    }
+                </script>
+
+                <div class="col-6 col-lg-3" style="margin-bottom: 50px;">
+                    <div class="row">
+                        <div class="row-col-2 no1">
+                            <img class="img-fluid" src="./img/網站用/韓國系列.png">
+                            <div class="addshop1 d-none d-md-block">
+                                <a href="#">
+                                    <div class="joinshopcar  " id="B">加入購物車</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row-col-2">
+                            <b style="font-size:1rem;">韓國gangaji系列</b>
+                            <p style="font-size:0.8rem; margin-top: 5px 0 5px 0;">
+                                韓國gangaji系列全品項<br>NT$600</p>
+                            <div class="d-grid gap-10">
+                                <button class="btn btn-12 btn-sm d-block d-sm-block d-md-none" id="b"><i
+                                        class="bi bi-cart3"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="noB" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="noBclose" id="close" style="background-color: transparent;">
+                                &times;
+                            </span>
+                        </div>
+                        <div class="modal-body">
+                            <img class="w-50" src="./img/網站用/韓國系列.png" style="float:left;margin:30px;">
+                            <div class="row" style="margin: 20px 0px 20px 0px;">
+                                <div class="row-col-2"><b style="font-size:1.5rem;">韓國gangaji系列</b></div>
+                                <div class="row-col-2">
+                                    <p style="font-size:1.2rem; margin: 20px;">韓國gangaji系列全品項</p>
+                                </div>
+                                <div class="row-col-2">
+                                    <div id="noBcount" style="font-size:1.2rem;text-align:center;">
+                                        <div>數量：
+                                            <button class="btn btn-sm" type="button" onclick="Badd()"
+                                                id="plus">+</button>
+                                            <button class="btn btn-sm" type="button" id="Bcount">1</button>
+                                            <button class="btn btn-sm" onclick="Bminus()" type="button"
+                                                id="reduce">-</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-col-2"><button class="btn pizza">全品項</button></div>
+                                <div class="row-col-2">
+                                    <div id="checkbtn" style="float:right;">
+                                        <button class="btn" id="check2">確認</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    var Bmodal = document.getElementById("noB");
+                    var Bbtn = document.getElementById("B");
+                    var Bspan = document.getElementsByClassName("noBclose")[0];
+                    Bbtn.onclick = function () {
+                        Bmodal.style.display = "block";
+                    }
+                    Bspan.onclick = function () {
+                        Bmodal.style.display = "none";
+                    }
+                    window.onclick = function (r) {
+                        if (r.target == Bmodal) {
+                            document.getElementById("noB") = "none";
+                        }
+                    }
+                    function Badd() {
+                        var conut111 = document.getElementById("Bcount").innerHTML;
+                        document.getElementById("Bcount").innerHTML = parseInt(conut111) + 1;
+                    }
+                    function Bminus() {
+                        var conut111 = document.getElementById("Bcount").innerHTML;
+                        if (parseInt(conut111) > 1) {
+                            document.getElementById("Bcount").innerHTML = parseInt(conut111) - 1;
+                        }
+                    }
+                    document.getElementById("check2").onclick = function () {
+                        num++;
+                        console.log(num);
+                        document.getElementById("noB").style.display = "none";
+                        document.getElementById("allshop").innerText = num;
+                    }
+
+                </script>
+                <div id="nob" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="bclose" style="background-color: transparent;">
+                                &times;
+                            </span>
+                        </div>
+                        <div class="modal-body" style="text-align:center;">
+                            <div><b style="font-size:1rem;">韓國gangaji系列</b></div>
+                            <div><img class="w-75" src="./img/網站用/韓國系列.png"></div>
+                            <div>
+                                <p style="font-size:0.5rem;">韓國gangaji系列全品項</p>
+                            </div>
+                            <div id="bcount" style="font-size:0.5rem; margin: 0px ;">數量：
+                                <button class="btn btn-sm" type="button" onclick="badd()" id="plus">+</button>
+                                <button class="btn btn-sm" type="button" id="nobcount">1</button>
+                                <button class="btn btn-sm" onclick="bbminus()" type="button" id="reduce">-</button>
+                            </div>
+                            <button style="margin-top: 20px;font-size:0.7rem;" class="btn pizza">全品項</button>
+                            <div id="checkbtn">
+                                <button style="margin-bottom: 20px; font-size:0.7rem;" class="btn"
+                                    id="checkb">確認</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    var bmodal = document.getElementById("nob");
+                    var bbtn = document.getElementById("b");
+                    var bspan = document.getElementsByClassName("bclose")[0];
+                    bbtn.onclick = function () {
+                        bmodal.style.display = "block";
+                    }
+                    bspan.onclick = function () {
+                        bmodal.style.display = "none";
+                    }
+                    window.onclick = function (r) {
+                        if (r.target == bmodal) {
+                            document.getElementById("nob") = "none";
+                        }
+                    }
+                    function badd() {
+                        var conunt = document.getElementById("nobcount").innerHTML;
+                        document.getElementById("nobcount").innerHTML = parseInt(conunt) + 1;
+                    }
+                    function bbminus() {
+
+                        var c = document.getElementById("nobcount").innerHTML;
+                        if (parseInt(c) > 1) {
+                            document.getElementById("nobcount").innerHTML = parseInt(c) - 1;
+                        }
+                    }
+                    function nobcheck() {
+                        bmodal.style.display = "none";
+                    }
+                </script>
+
+                <div class="col-6 col-lg-3" style="margin-bottom: 50px;">
+                    <div class="row">
+                        <div class="row-col-2 no1">
+                            <img class="img-fluid" src="./img/網站用/自然農場.png">
+                            <div class="addshop1 d-none d-md-block">
+                                <a href="#">
+                                    <div class="joinshopcar" id="C">加入購物車</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row-col-2">
+                            <b style="font-size:1rem;">自然農場 Nature Foam</b>
+                            <p style="font-size:0.8rem; margin-top: 5px 0 5px 0;">
+                                自然農場任選三件<br>NT$500</p>
+                            <div class="d-grid gap-10 ">
+                                <button class="btn btn-12 btn-sm d-block d-sm-block d-md-none" id="c"><i
+                                        class="bi bi-cart3"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="noC" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="noCclose" id="close" style="background-color: transparent;">
+                                &times;
+                            </span>
+                        </div>
+                        <div class="modal-body">
+                            <img class="w-50" src="./img/網站用/自然農場.png" style="float:left;margin:30px;">
+                            <div class="row" style="margin: 20px 0px 20px 0px;">
+                                <div class="row-col-2"><b style="font-size:1.5rem;">自然農場 Nature Foam</b></div>
+                                <div class="row-col-2">
+                                    <p style="font-size:1.2rem; margin: 20px;">任選三件特價</p>
+                                </div>
+                                <div class="row-col-2">
+                                    <div id="noCcount" style="font-size:1.2rem;text-align:center;">
+                                        <div>數量：
+                                            <button class="btn btn-sm" type="button" onclick="Cadd()"
+                                                id="plus">+</button>
+                                            <button class="btn btn-sm" type="button" id="Ccount">1</button>
+                                            <button class="btn btn-sm" onclick="Cminus()" type="button"
+                                                id="reduce">-</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-col-2" style="margin-top:20px;">
+                                    <div class="row">
+                                        <div class="col pizza1"><button class="btn pizz1">厚切鹿舌</button></div>
+                                        <div class="col-3 pizza1"><button class="btn pizz1">鱈魚皮</button></div>
+                                        <div class="col-3 pizza1"><button class="btn pizz1">鵝氣管</button></div>
+                                    </div>
+                                </div>
+                                <div class="row-col-2" style="margin-top:20px;">
+                                    <div id="checkbtn">
+                                        <button style="float:right;" class="btn"id="check3">確認</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    var Cmodal = document.getElementById("noC");
+                    var Cbtn = document.getElementById("C");
+                    var Cspan = document.getElementsByClassName("noCclose")[0];
+                    Cbtn.onclick = function () {
+                        Cmodal.style.display = "block";
+                    }
+                    Cspan.onclick = function () {
+                        Cmodal.style.display = "none";
+                    }
+                    window.onclick = function (r) {
+                        if (r.target == Cmodal) {
+                            document.getElementById("noC") = "none";
+                        }
+                    }
+                    function Cadd() {
+                        var conut111 = document.getElementById("Ccount").innerHTML;
+                        document.getElementById("Ccount").innerHTML = parseInt(conut111) + 1;
+                    }
+                    function Cminus() {
+                        var conut111 = document.getElementById("Ccount").innerHTML;
+                        if (parseInt(conut111) > 1) {
+                            document.getElementById("Ccount").innerHTML = parseInt(conut111) - 1;
+                        }
+                    }
+                    document.getElementById("check3").onclick = function () {
+                        num++;
+                        console.log(num);
+                        document.getElementById("noC").style.display = "none";
+                        document.getElementById("allshop").innerText = num;
+                    }
+                </script>
+                <div id="noc" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="cclose" id="close" style="background-color: transparent;">
+                                &times;
+                            </span>
+                        </div>
+                        <div class="modal-body">
+                            <div><b style="font-size:1rem; ">自然農場 Nature Foam</b></div>
+                            <div><img class="w-75" src="./img/網站用/自然農場.png" style=" margin-left:10%;"></div>
+                            <div>
+                                <p style="font-size:0.5rem;">任選三件特價</p>
+                            </div>
+                            <div id="ccount" style="font-size:0.5rem; margin: 0px ;">數量：
+                                <button class="btn btn-xs" type="button" onclick="cadd()" id="plus">+</button>
+                                <button class="btn btn-xs" type="button" id="noccount">1</button>
+                                <button class="btn btn-xs" onclick="cminus()" type="button" id="reduce">-</button>
+                            </div>
+                            <button style="margin: 10px 10px 0 0;float:left;" class="btn pizza">厚切鹿舌</button>
+                            <button style="margin: 10px 0px 0 0;float:left;" class="btn pizza">鱈魚皮捲</button>
+                            <button style="margin: 10px 0px 0 0;float:left;" class="btn pizza">鵝氣管</button>
+                            <div id="checkbtn">
+                                <button style="margin: 10px 0px 10px 0px; font-size:0.7rem;" class="btn"
+                                    id="checkc">確認</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    var cmodal = document.getElementById("noc");
+                    var cbtn = document.getElementById("c");
+                    var cspan = document.getElementsByClassName("cclose")[0];
+                    cbtn.onclick = function () {
+                        cmodal.style.display = "block";
+                    }
+                    cspan.onclick = function () {
+                        cmodal.style.display = "none";
+                    }
+                    window.onclick = function (r) {
+                        if (r.target == cmodal) {
+                            document.getElementById("noc") = "none";
+                        }
+                    }
+                    function cadd() {
+                        var conunt = document.getElementById("noccount").innerHTML;
+                        document.getElementById("noccount").innerHTML = parseInt(conunt) + 1;
+                    }
+                    function cminus() {
+                        var conunt = document.getElementById("noccount").innerHTML;
+                        if (parseInt(conunt) > 1) {
+                            document.getElementById("noccount").innerHTML = parseInt(conunt) - 1;
+                        }
+                    }
+                </script>
+
+                <div class="col d-none d-none d-lg-block"></div>
+            </div>
+        </div>
+
+
+    </div>
+    <footer>
+        <div class="foot">
+            <div style="color:black;">僅供練習使用非商用</div>
+            <div style="color:black;"><a href="mailto:minho5200421@gmail.com">聯絡我們</a></div>
+            <div><a href="./change.html">退換貨政策</a></div>
+            <div><a href="#">聯絡地址：408台中市南屯區黎明路二段658號</a></div>
+        </div>
+    </footer>
+    <script>
+        const mainMenu = document.querySelector('.mainMenu');
+        const closeMenu = document.querySelector('.closeMenu');
+        const openMenu = document.querySelector('.openMenu');
+        const menu_items = document.querySelectorAll('nav .mainMenu li a');
+
+
+
+
+        openMenu.addEventListener('click', show);
+        closeMenu.addEventListener('click', close);
+
+        // close menu when you click on a menu item 
+        menu_items.forEach(item => {
+            item.addEventListener('click', function () {
+                close();
+            })
+        })
+
+        function show() {
+            mainMenu.style.display = 'flex';
+            mainMenu.style.top = '0';
+        }
+        function close() {
+            mainMenu.style.top = '-100%';
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/model.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./public/css/woofdaynice.css">
+    <link rel="icon" href="./public/img/shiba-'logo_工作區域 1 複本 2.png">
+    <script defer src="./public/JS/woofdaynice.js"></script>
+    <title>王日九寵物選物</title>
+    <style>
+        span {
+            color: black;
+        }
+
+        .carousel-control-next-icon {
+            color: black;
+            background-color: transparent;
+        }
+
+        .carousel-control-prev-icon {
+            color: black;
+            background-color: transparent;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="fixed-top ">
+        <nav class="n1">
+            <div class="openMenu" style="background-color:transparent;">
+                <i class="bi bi-list" style="background-color:transparent;"></i>
+            </div>
+            <div class="header">
+                <a href="./index.html"><img id="logo" src="./public/img/shiba-'logo_line.png"></a>
+            </div>
+
+            <ul class="mainMenu title1" target="_blank">
+                <li><a href="#" id="about">關於我們</a></li>
+                <li><a href="./food.html" id="food">狗狗糧食</a></li>
+                <li><a href="./snack.html" id="snack">狗狗點心</a></li>
+                <li><a href="./toy.html" id="toy">狗狗玩具</a></li>
+                <li><a href="./combe.html" id="combe">優惠組合</a></li>
+                <div class="closeMenu" style="background-color:transparent;">
+                    <i class="bi bi-x-lg" style="background-color:transparent;"></i>
+                </div>
+            </ul>
+        </nav>
+        <nav class="shop">
+            <div class="mb" style=" background:rgb(217, 195, 166);">
+                <a href="#" id="member1">
+                    <i class="bi bi-person-vcard-fill" style="background-color:rgb(217, 195, 166);"></i>
+                </a>
+            </div>
+            <div class="sp" style=" background:rgb(217, 195, 166);">
+                <a href="#" id="shopping1">
+                    <i class="bi bi-cart4"></i>
+                </a>
+            </div>
+        </nav>
+    </nav>
+    <br>
+    <br>
+
+    <div class="content2">
+        <div>
+           
+        </div>
+    </div>
+    <footer>
+        <div class="foot">
+            <div style="color:black;"><a href="mailto:minho5200421@gmail.com">聯絡我們</a></div>
+            <div><a href="#">退換貨政策</a></div>
+            <div><a href="#">聯絡地址：408台中市南屯區黎明路二段658號</a></div>
+        </div>
+    </footer>
+
+
+    <script>
+        const mainMenu = document.querySelector('.mainMenu');
+        const closeMenu = document.querySelector('.closeMenu');
+        const openMenu = document.querySelector('.openMenu');
+        const menu_items = document.querySelectorAll('nav .mainMenu li a');
+
+
+
+
+        openMenu.addEventListener('click', show);
+        closeMenu.addEventListener('click', close);
+
+        // close menu when you click on a menu item 
+        menu_items.forEach(item => {
+            item.addEventListener('click', function () {
+                close();
+            })
+        })
+
+        function show() {
+            mainMenu.style.display = 'flex';
+            mainMenu.style.top = '0';
+        }
+        function close() {
+            mainMenu.style.top = '-100%';
+        }
+    </script>
+</body>
+
+</html>
