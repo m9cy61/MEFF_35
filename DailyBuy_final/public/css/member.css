@@ -1,0 +1,393 @@
+@font-face {
+  font-family: "GenSenRounded TW";
+  src: url("../font/GenSenRounded-M.ttc") format("truetype");
+}
+
+/* main */
+main {
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+/* tab style */
+.tab {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* tab btn */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 20px 20px;
+  font-size: 30px;
+  align-items: center;
+  font-family: "GenSenRounded TW";
+}
+
+/* tab btn hover */
+.tab button:hover {
+  color: #005655;
+  border-bottom: #005655 solid 2px;
+}
+
+/* tab btn active */
+.tab button.active {
+  color: #005655;
+  border-bottom: #005655 solid 2px;
+}
+.order_table tr th{
+  color: #dd631e;
+  font-size: 22px;
+  /* font-family: 'GenSenRounded TW'; */
+}
+/* 分頁內容 */
+.tabcontent {
+  display: flex;
+  border-top: none;
+  margin-top: 50px;
+  font-family: "GenSenRounded TW";
+}
+
+/* 左邊+右邊 */
+.member_container,
+.leader_container,
+.follower_container {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+/* 左邊大頭照區 */
+.member_head,
+.leader_head,
+.follower_head {
+  display: flex;
+  flex-direction: column;
+  padding-top: 150px;
+  align-items: center;
+  font-family: "GenSenRounded TW";
+}
+
+.member_head h5,
+.leader_head h5,
+.follower_head h5 {
+  font-size: 36px;
+}
+
+/* 左邊大頭照區按鈕 */
+.member_head .btn,
+.leader_head .btn,
+.follower_head .btn {
+  font-size: 22px;
+  border: solid 2px #dd631e;
+  background-color: #dd641e;
+  color: white;
+  margin-top: 10px;
+}
+
+.member_head .btn:hover,
+.leader_head .btn:hover,
+.follower_head .btn:hover {
+  font-size: 25px;
+}
+
+/* 右邊資訊區 */
+.member_info,
+.leader_group,
+.follower_group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 5px;
+}
+
+/* 基本資料修改表單dialog */
+#update_info {
+  border: #98c2d8 2px solid;
+  background-color: #f3f5f6;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.dialog_title {
+  color: #4ea1d3;
+  font-family: "GenSenRounded TW";
+}
+
+#info_form > input[type="file"] {
+  display: none;
+}
+
+.update_selfie {
+  width: 200px;
+  height: 200px;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 50%;
+  border: #98c2d8 2px solid;
+  cursor: pointer;
+}
+
+#info_form label {
+  padding: 5px;
+  margin: 5px;
+  font-family: "GenSenRounded TW";
+}
+
+#info_form .update_input {
+  display: block;
+  width: 500px;
+  padding: 5px;
+  margin: 5px;
+  border: none;
+  border-bottom: #98c2d8 2px solid;
+  background-color: rgba(255, 228, 196, 0.414);
+  border-radius: 5px;
+}
+
+#info_form .update_textarea {
+  display: block;
+  width: 500px;
+  padding: 5px;
+  margin: 5px;
+  background-color: rgba(255, 228, 196, 0.414);
+  border: #98c2d8 2px solid;
+  border-radius: 5px;
+}
+
+.savebtn {
+  border: #98c2d8 2px solid;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  font-family: "GenSenRounded TW";
+  width: 500px;
+}
+
+#info_form .update_input:hover,
+#info_form .update_textarea:hover {
+  border: #54a5d1 2px solid;
+}
+
+.savebtn:hover {
+  border: #54a5d1 2px solid;
+  background-color: rgba(255, 228, 196, 0.414);
+}
+
+/* 右邊個人資料表格區 */
+table strong {
+  white-space: nowrap;
+  color: #dd631e;
+}
+
+table tr {
+  border-bottom: #98c2d8 solid 2px;
+}
+
+td {
+  padding: 10px;
+  font-size: 25px;
+}
+
+/* 開團跟團商品卡片 */
+.leader_group .card {
+  background-color: #ffbf55;
+  height: 250px;
+  position: relative;
+}
+
+.follower_group .card {
+  background-color: #8cc7cd;
+  height: 250px;
+  position: relative;
+}
+
+/* 商品卡片title */
+.follower_group .card-title,
+.leader_group .card-title {
+  font-size: 42px;
+  font-family: "GenSenRounded TW";
+}
+
+/* 商品卡片團購時間 card-text */
+.follower_group .card-text,
+.leader_group .card-text {
+  font-size: 28px;
+}
+
+/* 商品卡片狀態state */
+.follower_group .state {
+  padding: 6px 12px 6px 12px;
+  height: 46px;
+  font-size: 20px;
+  border-color: #1d3866;
+  border-style: dashed;
+  border-width: 2px;
+  display: inline-block;
+  margin-right: 50px;
+}
+
+/* 商品卡片按鈕 */
+.follower_group .btn_state {
+  border: #1d3866 dashed 2px;
+  font-size: 20px;
+}
+
+.follower_group .btn_state:hover,
+.leader_group .btn_state:hover {
+  border-style: solid;
+}
+
+.leader_group .state {
+  padding: 6px 12px 6px 12px;
+  height: 46px;
+  font-size: 20px;
+  border-color: #805f2a;
+  border-style: dashed;
+  border-width: 2px;
+  display: inline-block;
+  margin-right: 50px;
+}
+
+.leader_group .btn_state {
+  border: #805f2a dashed 2px;
+  font-size: 20px;
+}
+
+/* 開團表單more */
+.leader_modal_background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.leader_order_modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  display: none;
+  width: 100vw;
+  height: 85vh;
+  margin-top: 35px;
+  overflow: scroll;
+}
+
+.order_table tr {
+  font-size: 22px;
+  /* font-family: 'GenSenRounded TW'; */
+}
+
+.order_img_div p {
+  font-size: 22px;
+  font-family: "GenSenRounded TW";
+}
+
+.order-info {
+  font-size: 22px;
+  font-family: "GenSenRounded TW";
+}
+
+/* 跟團表單more */
+.follower_modal_background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.follower_order_modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  display: none;
+  width: 90vw;
+  height: 85vh;
+  margin-top: 35px;
+  overflow: scroll;
+}
+.leader_order_modal::-webkit-scrollbar,
+.follower_order_modal::-webkit-scrollbar {
+  width: 7px;
+}
+.leader_order_modal::-webkit-scrollbar-button,
+.follower_order_modal::-webkit-scrollbar-button {
+  background: transparent;
+
+  border-radius: 4px;
+}
+.leader_order_modal::-webkit-scrollbar-track-piece,
+.follower_order_modal::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+.leader_order_modal::-webkit-scrollbar-thumb,
+.follower_order_modal::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+
+  background-color: rgba(0, 0, 0, 0.4);
+
+  border: 1px solid slategrey;
+}
+.leader_order_modal::-webkit-scrollbar-track,
+.follower_order_modal::-webkit-scrollbar-track {
+  box-shadow: transparent;
+}
+.btn-close {
+  position: absolute;
+  right: 2%;
+  top: 2%;
+}
+
+.selfie {
+  aspect-ratio: 1/1;
+}
+.text_container,
+.img_container {
+  /* display: none; */
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  /* background-color: #005655; */
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.img_container img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+.text_container {
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="icon" href="/media/logo/大專logo(only).png">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/font-style/GenSenRounded-M.ttc">
+    <link rel="stylesheet" href="/bootstarp/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <script src="/js/creat_new.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <title>DailyBuy 帶你買</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap');
+
+        * {
+            font-family: 'media\GenSenRounded-M.ttc';
+        }
+
+        h1 {
+            color: rgba(221, 99, 30, 1);
+        }
+
+        form {
+            width: 95%;
+            margin: 5% 5%;
+
+        }
+
+        form>div:not(:nth-child(1)):not(:nth-child(3))>div,
+        form>div:nth-child(2)>div {
+            background-color: rgba(243, 215, 168, 1);
+            margin: 1% auto;
+            width: 100%;
+
+        }
+
+        form>div>div {
+            padding-left: 3%;
+        }
+
+     
+
+        /* 放圖片樣式------------------------- */
+        .pic_box {
+            margin-bottom: 5%;
+        }
+
+        input {
+            border: none;
+            border-bottom: 2px solid rgb(78, 77, 77);
+            background-color: rgba(243, 215, 168, 1);
+        }
+
+
+        .good_pic>div>div>input:nth-child(2) {
+            display: none;
+        }
+
+        .main_pic1 {
+            width: 10vw;
+            height: 22vh;
+            border: 2px solid black;
+            border-style: dotted;
+            margin: 0% 1%;
+
+        }
+
+        .side_pic {
+            width: 10vw;
+            height: 18vh;
+            border: 2px solid black;
+            border-style: dotted;
+
+            margin: 0% 1%;
+
+        }
+
+        /* ----------------------------------- */
+        button {
+            border: none;
+            margin: 1% 1%;
+        }
+
+        /* 折扣碼背景----------------------------------- */
+        .discount_box {
+            width: 100%;
+            height: 20%;
+
+        }
+
+        .discount_box>div {
+            width: 18%;
+            height: 5%;
+            background-size: cover;
+            display: inline-block;
+            padding: 0% 2%;
+            margin-left: 2%;
+        }
+
+        /* button樣式------------------------------------- */
+        button>h3 {
+            color: #005655;
+
+        }
+
+        button {
+            background-color: #D9D9D9;
+
+        }
+
+        /* 標題樣式--------------------------------- */
+        form>:nth-child(1)>div:not(:nth-child(2)),
+        form>:nth-child(3)>div:not(:nth-child(2)) {
+            border-bottom: 2px solid #005655;
+            height: 5vh;
+        }
+
+    
+    </style>
+    <title>開團表單</title>
+</head>
+
+<body>
+ <!--上方的header-->
+ <header class="nav">
+    <a href="/index" class="header_logo">
+      <img src="/media/logo/logo.png" alt="logo" />
+    </a>
+    <div class="header_text">
+      <div class="items"><a href="/news">最新消息</a></div>
+      <div class="items"><a href="/top">精選團主</a></div>
+      <div class="items"><a href="/allProducts">全部團購</a></div>
+      <div class="items"><a href="/wish">許願清單</a></div>
+    </div>
+    <a href="/member" class="member_icon">
+      <img
+        id="member_icon"
+        src="/media/logo/member_icon.png"
+        style="width: 50px; height: 50px; border-radius: 50%"
+        alt=""
+      />
+    </a>
+    <script src="js/headerIcon.js"></script>
+  </header>
+
+  <!--右方的header-->
+  <aside>
+    <div class="seach_icon">
+      <a href="#" class="icon bi bi-search"></a>
+      <a href="#" class="icon bi bi-facebook"></a>
+      <a href="#" class="icon bi bi-instagram"></a>
+      <a
+        href="/allProducts"
+        onclick="sessionStorage.setItem('collectList',true)"
+        class="icon bi bi-heart-fill"
+      ></a>
+    </div>
+    <div class="search_modal">
+      <input type="text" class="bi bi-search search_modal_input" />
+      <button class="icon bi bi-search search_icon"></button>
+    </div>
+    <div class="search_modal_background"></div>
+    <script src="/js/header.js"></script>
+    <div class="about_us">
+      <div class="block"><a href="/sellerform">我要開團</a></div>
+      <div class="block"><a href="/about_us"> 關於我們</a></div>
+      <div class="block"><a href="/instruction"> 使用教學</a></div>
+    </div>
+  </aside>
+    
+    <div class=" me-5 mt-5 m d-flex justify-content-center form_outside">
+        <form method="post"  enctype="multipart/form-data" class="">
+            <div class="row ">
+                <div class="col-4 "></div>
+                <div class="col-4 text-center">
+                    <h1>商品資訊</h1>
+                </div>
+                <div class="col-4 "></div>
+            </div>
+
+            <div class="d-flex flex-column align-items-center ">
+                <div class="">
+                    <label for="">
+                        <h3>*店家名稱:</h3>
+                    </label>
+                    <input type="text" name="shop_name">
+                </div>
+                <div class="">
+                    <label for="">
+                        <h3>*商品名稱:</h3>
+                    </label>
+                    <input type="text" name="product">
+                </div>
+                <div class="">
+                    <label for="">
+                        <h3>*店家地址:</h3>
+                    </label>
+
+                    <h5 style="display: inline;">縣市:</h5>
+                    <select name="country" id="">
+                        <option value="臺北">臺北市</option>
+                        <option value="新北">新北市</option>
+                        <option value="桃園">桃園市</option>
+                        <option value="臺中">臺中市</option>
+                        <option value="臺南">臺南市</option>
+                        <option value="高雄">高雄市</option>
+                        <option value="新竹">新竹縣</option>
+                        <option value="苗栗">苗栗縣</option>
+                        <option value="彰化">彰化縣</option>
+                        <option value="南投">南投縣</option>
+                        <option value="雲林">雲林縣</option>
+                        <option value="嘉義">嘉義縣</option>
+                        <option value="屏東">屏東縣</option>
+                        <option value="宜蘭">宜蘭縣</option>
+                        <option value="花蓮">花蓮縣</option>
+                        <option value="臺東">臺東縣</option>
+                        <option value="基隆">基隆市</option>
+                        <option value="新竹">新竹市</option>
+                        <option value="嘉義">嘉義市</option>
+                    </select>
+                    <h5 style="display: inline;">地址:</h5>
+                    <input type="text" name="shop_state">
+                </div>
+                <div class="good_pic d-flex flex-column">
+                    <div>
+                        <h3>*上傳商品照片:</h3>
+                    </div>
+                    <div class="pic_box d-flex justify-content-evenly align-items-end">
+                        <div>
+                            <label class="main_pic1" for="main_pic1">*主圖片:</label>
+                            <input onchange="change('main_pic1')" type="file" class="" id="main_pic1" name="pic_url">
+                        </div>
+                        <div>
+                            <label class="side_pic side_pic2" for="side_pic2">細節圖1:</label>
+                            <input onchange="change('side_pic2')" type="file" id="side_pic2" name="pic_url">
+
+                        </div>
+                        <div>
+                            <label class="side_pic side_pic3" for="side_pic3">細節圖2:</label>
+                            <input onchange="change('side_pic3')" type="file" id="side_pic3" name="pic_url">
+                        </div>
+                        <div>
+                            <label class="side_pic side_pic4" for="side_pic4">細節圖3:</label>
+                            <input onchange="change('side_pic4')" type="file" id="side_pic4" name="pic_url">
+
+                        </div>
+                    </div>
+                    <!-- 是否要放假圖片 -->
+                </div>
+                <div class="">
+                    <label for="web_url">
+                        <h3>*商品參考網址:</h3>
+                    </label>
+                    <input type="text" id="web_url" name="product_url">
+                </div>
+                <div class="">
+                    <label for="web_url">
+                        <h3>*商品賞味期限:</h3>
+                    </label>
+                    <input type="date" id="web_url" name="exp_date">
+                </div>
+                <div class="">
+                    <h3 style="display: inline-block;">*商品種類:</h3>
+                    <label for="normal">常溫食品</label>
+                    <input type="radio" id="normal" value="normal" name="product_type">
+                    <label for="freeze">冷凍食品</label>
+                    <input type="radio" id="freeze" value="freeze" name="product_type">
+                    <label for="others">其他</label>
+                    <input type="radio" id="others" value="others" name="product_type">
+                </div>
+                <div class="">
+                    <label for="product_intro">
+                        <h3>*商品簡介:</h3>
+                    </label>
+                    <input type="text" id="product_intro" name="product_intro">
+                </div>
+                <div class="">
+                    <div id="specbox1">
+                        <label for="spec1">
+                            <h3>*商品規格:</h3>
+                        </label>
+                        <input type="text" id="spec1" name="spec1">
+                        <label for="price">
+                            <h3>*價格:</h3>
+                        </label>
+                        <input type="text" id="price" name="spec1_price">
+                        <h3 style="display: inline;">NT</h3>
+                    </div>
+
+
+                    <button type="button" onclick="enter_spec()">新增商品規格+</button>
+                </div>
+                <div class="discount_box">
+                    <div class="">
+                        <h3>設定折扣碼:</h3>
+                    </div>
+                    <label for="discount">序號:</label>
+                    <input type="text" id="discount" name="discount">
+                    <label for="discount_fee">折價金額:</label>
+                    <input type="number" id="discount_fee" name="discount_price">
+                </div>
+
+            </div>
+
+
+            <div class="row ">
+                <div class="col-4 "></div>
+                <div class="col-4 text-center">
+                    <h1>團購資訊</h1>
+                </div>
+                <div class="col-4 "></div>
+            </div>
+            <div class="d-flex flex-column align-items-start">
+
+                <div class="">
+                    <h3 style="display: inline;">*可接受交易方式:</h3>
+                    <input type="checkbox" name="trade_way" id="face" value="face" onchange="state()">
+                    <label for="face" style="display: inline;">面交</label>
+                    <div id="trade_state" style="display: inline; width: 100px;"></div>
+                    <input type="checkbox" name="trade_way" id="home" value="home">
+                    <label for="home">宅配</label>
+                </div>
+                <div>
+                    <h3 style="display: inline;">*可接受付款方式:</h3>
+                    <input type="checkbox" name="pay_way" id="cash" value="cash">
+                    <label for="cash">貨到付款</label>
+                    <input type="checkbox" name="pay_way" id="bank" value="bank">
+                    <label for="bank">銀行匯款</label>
+                    <input type="checkbox" name="pay_way" id="mobile_pay" value="mobile_pay">
+                    <label for="mobile_pay">行動支付</label>
+                    <input type="checkbox" name="pay_way" id="credit" value="credit">
+                    <label for="credit">ATM匯款</label>
+                    <!-- 點選出現收款帳戶input -->
+                </div>
+                <div>
+                    <label for="">
+                        <h3>*團購期限:</h3>
+                    </label>
+                    <h5 style="display: inline;">開始日期:</h3>
+                        <input type="date" name="start_date">
+                        <h5 style="display: inline;">結束日期:</h3>
+                            <input type="date" name="end_date">
+
+                </div>
+                <div>
+                    <label for="">
+                        <h3>*預計交貨日:</h3>
+                    </label>
+                    <input type="date" name="trade_date">
+
+                </div>
+                <div>
+                    <label for="notefication" name="notefication">
+                        <h3>注意事項:</h3>
+                    </label>
+                    <input type="text" id="notefication" name="notefication">
+                </div>
+
+            </div>
+            <div class="d-flex justify-content-end">
+                <button class="new_order">確定送出</button>
+            </div>
+        </form>
+    </div>
+ 
+  <!-- footer -->
+  <footer class="footer_pd">
+    <ul>
+      <li class="footer_main"><a href="/news">最新消息</a></li>
+    </ul>
+    <ul>
+      <li class="footer_main"><a href="/allProducts">全部團購</a></li>
+      <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','n')">北部團購</a></li>
+      <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','m')">中部團購</a></li>
+      <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','s')">南部團購</a></li>
+      <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','e')">東部團購</a></li>
+      <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','o')">外島團購</a></li>
+    </ul>
+    <ul>
+      <li class="footer_main"><a href="/top">精選團購</a></li>
+      <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','n')">北部團購</a></li>
+      <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','m')">中部團購</a></li>
+      <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','s')">南部團購</a></li>
+      <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','e')">東部團購</a></li>
+      <li class="footer_sub"><a href="/allProducts" onclick="sessionStorage.setItem('place','o')">外島團購</a></li>
+    </ul>
+    <ul>
+      <li class="footer_main"><a href="/member">會員中心</a></li>
+      <li class="footer_sub"><a href="/register">註冊</a></li>
+      <li class="footer_sub"><a href="/login">登入</a></li>
+      <li class="footer_sub"><a href="#" id="logout" onclick="logout()">登出</a></li>
+    </ul>
+    <ul>
+      <li class="footer_main"><a href="/about_us">關於我們</a></li>
+    </ul>
+    <ul>
+      <li class="footer_main"><a href="/about_us">聯絡我們</a></li>
+    </ul>
+    <ul>
+      <li class="footer_main"><a href="/instruction">使用教學</a></li>
+    </ul>
+  </footer>
+  <script src="/js/logout.js"></script>
+   
+   
+    <script>
+        var a = 2
+        function enter_spec() {
+
+
+            $("#specbox1").append(
+
+                `
+                <div id="specbox${a}">
+                        <label for="spec">
+                            <h3>*商品規格:</h3>
+                        </label>
+                        <input type="text" id="spec" name="spec${a}">
+                        <label for="price">
+                            <h3>*價格:</h3>
+                        </label>
+                        <input type="text" id="price" name="spec${a}_price">
+                        <h3 style="display: inline;">NT</h3>
+                    </div>
+
+                `
+            )
+            a++
+            console.log(document.documentElement.outerHTML);
+
+
+        }
+        function change(x) {
+            console.log(x)
+            switch (x) {
+                case "main_pic1":
+                    $(".main_pic1").html("已收到");
+                    break;
+                case "side_pic2":
+                    $(".side_pic2").html("已收到");
+                    break;
+
+                case "side_pic3":
+                    $(".side_pic3").html("已收到");
+                    break;
+                case "side_pic4":
+                    $(".side_pic4").html("已收到");
+                    break;
+            }
+        }
+        function state() {
+            if ($("#face").is(":checked")) {
+                $("#trade_state").append(`
+      <input type="text" style="display: inline;" name="trade_state">
+    `)
+            } else {
+                $("#trade_state input[type='text']").remove();
+            }
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
